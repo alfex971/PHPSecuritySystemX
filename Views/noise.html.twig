@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Noise</title>
-</head>
-<body>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +44,10 @@
             <th >Number of occurences</th>
         </tr>
         <tr>
-            <td>{{ result.DateTime }}</td>
-            <td>{{ result.NoiseLevel }}</td>
-            <td></td>
+            {% for noise in noises %}
+            <td>{{ noise.DateTime }}</td>
+            <td>{{ noise.NoiseLevel }}</td>
+            <td>{{ noise.Motion }}</td>
         </tr>
         </tbody>
         <tr class="last-row">
@@ -62,7 +57,5 @@
     </table>
 
 </main>
-</body>
-</html>
 </body>
 </html>

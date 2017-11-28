@@ -4,13 +4,13 @@ $url = "http://securitysystemxweb.azurewebsites.net/Service1.svc/motions/";
 //$resultWrapped = $client->GetNoise();
 $jsondata = file_get_contents($url);
 $motion = json_decode($jsondata,true);
-if (empty($noise)){
+if (empty($motion)){
     $motionArray = null;
 }
 else{
-    $motionArray = array($noise);
+    $motionArray = array($motion);
 }
-
+print_r($motionArray);
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
 
@@ -18,7 +18,7 @@ $loader = new Twig_Loader_Filesystem('../Views');
 $twig = new Twig_Environment($loader, array(
     'auto_reload' => true
 ));
-$template = $twig->loadTemplate('noise.html.twig');
+$template = $twig->loadTemplate('motion.html.twig');
 echo $template->render(array('motions' => $motionArray));
 
 /**

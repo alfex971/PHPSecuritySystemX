@@ -10,7 +10,7 @@ if (empty($noise)){
 else{
     $noiseArray = array($noise);
 }
-print_r($noiseArray);
+
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Noises</title>
+    <style>
+        tr,td,th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Security System X</h1>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th width="175px" colspan="2">Noise Sensor</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Date</th>
+            <th>Noise</th>
+
+        </tr>
+        {% for noise in noises %}
+        <tr>
+            <td>{{ noise.DateTime }}</td>
+            <td>{{ noise.NoiseLevel }}
+
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+        <tr class="last-row">
+            <td colspan="2"><a href="#">Full data</a> </td>
+            <td><a href="#">Full data</a> </td>
+        </tr>
+    </table>
+
+</main>
+</body>
+</html>

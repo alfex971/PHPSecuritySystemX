@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Motions</title>
+    <style>
+        tr,td,th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Security System X</h1>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+
+            <th colspan="2">Motion Sensor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Date</th>
+            <th>Motion</th>
+
+        </tr>
+        {% for motion in motions %}
+            <tr>
+                <td>{{ motion.DateTime }}</td>
+                <td>{{ motion.MotionLevel }}</td>
+
+            </tr>
+        {% endfor %}
+        <tr>
+            <th>Number of occurrences</th>
+            <td>{{ numberOfOccurrences }}</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+
+</main>
+</body>
+</html>

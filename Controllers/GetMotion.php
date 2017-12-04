@@ -1,5 +1,5 @@
 <?php
-$url = "http://securitysystemxweb.azurewebsites.net/Service1.svc/motions/";
+$url = "http://securitysystemxrestservice.azurewebsites.net/Service1.svc/motionslast/";
 //$client = new SoapClient("http://localhost:50877/Service1.svc?wsdl");
 //$resultWrapped = $client->GetNoise();
 $jsondata = file_get_contents($url);

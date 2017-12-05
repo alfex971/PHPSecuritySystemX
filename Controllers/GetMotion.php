@@ -10,7 +10,7 @@ if (empty($motion)){
 else{
     $motionArray = array($motion);
 }
-print_r($motionArray);
+
 require_once '../vendor/autoload.php';
 Twig_Autoloader::register();
 

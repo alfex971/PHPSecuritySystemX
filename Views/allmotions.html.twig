@@ -13,6 +13,9 @@
 <header>
     <h1>Security System X</h1>
 </header>
+<nav>
+    <a href="../index.html">Home</a>
+</nav>
 <main>
     <table>
         <thead>
@@ -31,7 +34,12 @@
             <tr>
                 <td>{{ motion.DateTime }}</td>
                 <td>{{ motion.MotionLevel }}</td>
-
+                <td><form action="../Controllers/DeleteMotion.php" method="post">
+                        <select name="id" >
+                            <option>{{ motion.ID }}</option>
+                        </select>
+                        <input type="submit" value="Delete">
+                    </form> </td>
             </tr>
         {% endfor %}
         <tr>

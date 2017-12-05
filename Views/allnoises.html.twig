@@ -13,6 +13,9 @@
 <header>
     <h1>Security System X</h1>
 </header>
+<nav>
+    <a href="../index.html">Home</a>
+</nav>
 <main>
     <table>
         <thead>
@@ -30,9 +33,13 @@
         {% for noise in noises %}
         <tr>
             <td>{{ noise.DateTime }}</td>
-            <td>{{ noise.NoiseLevel }}
-
-            </td>
+            <td>{{ noise.NoiseLevel }}</td>
+            <td><form action="../Controllers/Delete.php" method="post">
+                    <select name="id" >
+                        <option>{{ noise.ID }}</option>
+                    </select>
+                    <input type="submit" value="Delete">
+                </form> </td>
         </tr>
         {% endfor %}
         </tbody>

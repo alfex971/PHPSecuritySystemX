@@ -68,12 +68,17 @@ class ComposerStaticInit8d5c05b94dd5ddf847a89c0adb7560de
         ),
     );
 
+    public static $classMap = array (
+        'JpGraph\\JpGraph' => __DIR__ . '/..' . '/jpgraph/jpgraph/lib/JpGraph.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8d5c05b94dd5ddf847a89c0adb7560de::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8d5c05b94dd5ddf847a89c0adb7560de::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit8d5c05b94dd5ddf847a89c0adb7560de::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit8d5c05b94dd5ddf847a89c0adb7560de::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -41,44 +41,78 @@
             text-align: center;
 
         }
+        div.container {
+            width: 100%;
+            border: 1px solid gray;
+        }
+        article {
+            margin-left: 170px;
+            border-left: 1px solid gray;
+            padding: 1em;
+            overflow: hidden;
+        }
+        img {
+            border-radius: 15%;
+            alignment: left;
+        }
+        p{
+            font-size: larger;
+            color: aliceblue;
+        }
     </style>
 </head>
 <body>
+<div class="container">
 <header>
    <h1>Security System X</h1>
 
 </header>
-<main>
-    <table>
-        <thead>
-        <tr>
-            <th width="175px" colspan="2">Noise Sensor</th>
-            <th>Motion Sensor</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th>Date</th>
-            <th>Noise</th>
-            <th>Motion</th>
-        </tr>
-        <tr>
-            <td>Today</td>
-            <td><form action="Controllers/GetNoise.php" method="post">
-                <input type="submit"></form></td>
-            <td><form action="Controllers/GetMotion.php" method="post">
-                <input type="submit">
-            </form></td>
-        </tr>
-        </tbody>
-        <tr class="last-row">
-            <td colspan="2"><a href="Controllers/GetNoiseAll.php">Full data</a> </td>
-            <td><a href="Controllers/GetMotionAll.php" >Full data</a></td>
-            <td><a href="Controllers/graph.php">See the Graph</a> </td>
-        </tr>
-    </table>
+    <article>
 
-</main>
+        <p >
+            <img src="Images/logo.JPG" style="float: left" hspace="10">
+        </p>
+
+        <main>
+            <table>
+                <thead>
+                <tr>
+                    <th width="175px" colspan="2">Noise Sensor</th>
+                    <th>Motion Sensor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>Date</th>
+                    <th>Noise</th>
+                    <th>Motion</th>
+                </tr>
+                <tr>
+                    <td>Today</td>
+                    <td><form action="Controllers/GetNoise.php" method="post">
+                        <input type="submit"></form></td>
+                    <td><form action="Controllers/GetMotion.php" method="post">
+                        <input type="submit">
+                    </form></td>
+                </tr>
+                </tbody>
+                <tr class="last-row">
+                    <td colspan="2"><a href="Controllers/GetNoiseAll.php">Full data</a> </td>
+                    <td><a href="Controllers/GetMotionAll.php" >Full data</a>
+
+                    </td>
+                </tr>
+            </table>
+            <p >
+            We help you protect your home from specific threats and consult you on how you can raise your security maturity to a higher level.</br>
+
+            A combination of deep technical expertise and a thorough understanding of what it is critical to your home allows our consultants to make a real difference in your home security.</p>
+
+        </main>
+
+    </article>
+
 <footer>Copyright &copy; aFiveStateOfLoveProduction</footer>
+</div>
 </body>
 </html>
